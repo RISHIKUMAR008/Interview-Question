@@ -1,0 +1,13 @@
+function rotateRight(arr, positions) {
+    const n = arr.length;
+    // Normalize the number of positions
+    positions = positions % n;
+
+    // Slice and concatenate
+    return arr.slice(n - positions).concat(arr.slice(0, n - positions));
+}
+
+let arr = [1, 2, 3, 4, 5];
+let rotatedRight = rotateRight(arr, 2);
+
+console.log("Array rotated to the right:", rotatedRight); // Output: [4, 5, 1, 2, 3]
