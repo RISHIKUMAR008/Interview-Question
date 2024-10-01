@@ -1,0 +1,21 @@
+let arr = [1, 2, 3, 4, 2, 3, 5];
+let uniqueArr = [];
+
+for (let i = 0; i < arr.length; i++) {
+  let isDuplicate = false;
+
+  // Check if the current element exists in the uniqueArr
+  for (let j = 0; j < uniqueArr.length; j++) {
+    if (arr[i] === uniqueArr[j]) {
+      isDuplicate = true;
+      break;
+    }
+  }
+
+  // If the element is not a duplicate, add it to uniqueArr
+  if (!isDuplicate) {
+    uniqueArr.push(arr[i]);
+  }
+}
+
+console.log(uniqueArr);
