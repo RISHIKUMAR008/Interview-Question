@@ -1,0 +1,26 @@
+//Find the Index of an Element:
+
+
+let arr = [10, 20, 30, 40, 50];
+let element = 30;
+let index = -1; // Default value if not found
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === element) {
+        index = i;
+        break; // Stop the loop once the element is found
+    }
+}
+
+if (index !== -1) {
+    console.log(`Element ${element} found at index: ${index}`);
+} else {
+    console.log(`Element ${element} not found in the array.`);
+}
+
+
+- - - - - - -- - - - - - - - - - - -- - - - - 
+
+
+let arr = [1, 2, 3, 4];
+let index = arr.indexOf(3); // 2
