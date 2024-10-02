@@ -1,0 +1,10 @@
+Problem: Find the common elements in two arrays.
+Approach: Use hash maps or sets to track elements from one array and check if they exist in the other.
+
+function findIntersection(arr1, arr2) {
+    let set1 = new Set(arr1);
+    let set2 = new Set(arr2);
+    return [...set1].filter(item => set2.has(item));
+}
+
+console.log(findIntersection([1, 2, 2, 1], [2, 2])); // Output: [2]
