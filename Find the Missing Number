@@ -1,0 +1,12 @@
+function findMissingNumber(arr) {
+    let n = arr.length + 1; // The array should have n elements, but one is missing
+    let totalSum = (n * (n + 1)) / 2; // Sum of numbers from 1 to n
+    let arrSum = arr.reduce((acc, curr) => acc + curr, 0); // Sum of elements in the array
+
+    return totalSum - arrSum;
+}
+
+let arr = [1, 2, 4, 5]; // Missing number is 3
+let missingNumber = findMissingNumber(arr);
+
+console.log("Missing number:", missingNumber); // Output: 3
